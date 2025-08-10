@@ -36,9 +36,19 @@ class ContactBook
 
     def add_contact
       puts "Enter the  name "
-      name = gets.chomp      
+      name = gets.chomp
+      loop do       
       puts "Enter the 10 digit phone number"
       phone_number = gets.chomp
+      if phone_number.length > 10
+        puts "your value is more than 10 digit #{phone_number}"
+                        
+        elsif phone_number.length < 10 
+          puts"Your value is less than 10 digit #{phone_number}"
+        elsif phone_number.length == 10
+          break 
+        end
+      end
       puts "enter the email address "
       email = gets.chomp
       @contact_book << Contact.new(name, phone_number, email)
