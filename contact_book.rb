@@ -37,6 +37,7 @@ class ContactBook
     def add_contact
       puts "Enter the  name "
       name = gets.chomp
+      phone_number = nil
       loop do       
       puts "Enter the 10 digit phone number"
       phone_number = gets.chomp
@@ -45,7 +46,7 @@ class ContactBook
                         
         elsif phone_number.length < 10 
           puts"Your value is less than 10 digit #{phone_number}"
-        elsif phone_number.length == 10
+        else
           break 
         end
       end
