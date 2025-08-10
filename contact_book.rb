@@ -26,8 +26,8 @@ class ContactBook
           break
         else
           puts "Invalid option please try again"
-        end
-      
+        
+      end
     end
   end
 
@@ -47,6 +47,9 @@ class ContactBook
         
     def view_contacts
       puts "The contacts in the list"
-      @contact_book
+      @contact_book.each do |contact|
+        puts contact
+      end
+       
     end  
 end
